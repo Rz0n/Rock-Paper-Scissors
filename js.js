@@ -7,16 +7,16 @@ function getHumanChoise() {
   let human = prompt("Enter valid choise is Rock, Paper, Scissors");
 
   if (human === "Rock") {
-    console.log("Your choise is Rock");
+    console.log("Rock");
   } else if (human === "Paper") {
-    console.log("Your choise is Paper")
+    console.log("Paper")
   } else if (human === "Scissors") {
-    console.log("your choise is Scissors");
+    console.log("Scissors");
   } else {
     console.log("That is not valid choise!!!!");
   }
 
-
+  return human;
 }
 
 
@@ -24,10 +24,11 @@ function getHumanChoise() {
 
 
 function getComputerChoise() {
-  let choise = ['Rock', "Paper", "Scissor"];
+  let choise = ['Rock', "Paper", "Scissors"];
   let randomChoise = choise[Math.floor(Math.random() * choise.length)];
 
   console.log(randomChoise);
+  return randomChoise;
 };
 
 
@@ -36,6 +37,10 @@ function getComputerChoise() {
 function playGround(humanChoise, computerChoise) {
     humanChoise = getHumanChoise();
     computerChoise = getComputerChoise();
+
+    if(humanChoise === "Rock" && computerChoise === "Paper") {
+      console.log("You lose! Rock lose to a Paper!");
+    }
 
   return;
 }
