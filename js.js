@@ -2,7 +2,6 @@ let humanScore = 0;
 let computerScore = 0;
 
 
-
 function getHumanChoise() {
   let human = prompt("Enter valid choise is Rock, Paper, Scissors");
 
@@ -19,10 +18,6 @@ function getHumanChoise() {
   return human;
 }
 
-
-
-
-
 function getComputerChoise() {
   let choise = ['Rock', "Paper", "Scissors"];
   let randomChoise = choise[Math.floor(Math.random() * choise.length)];
@@ -32,14 +27,28 @@ function getComputerChoise() {
 };
 
 
-
-
 function playGround(humanChoise, computerChoise) {
     humanChoise = getHumanChoise();
     computerChoise = getComputerChoise();
 
     if(humanChoise === "Rock" && computerChoise === "Paper") {
       console.log("You lose! Rock lose to a Paper!");
+    } else if(humanChoise === "Rock" && computerChoise === "Scissors") {
+      console.log("You Win! Rock beats Scissors");
+    } else if(humanChoise === "Rock" && computerChoise === "Rock") {
+      console.log("Is a Tie!");
+    } else if(humanChoise === "Paper" && computerChoise === "Rock") {
+      console.log("You Win! Paper beats Rock");
+    } else if(humanChoise === "Paper" && computerChoise === "Paper") {
+      console.log("Is a Tie!");
+    } else if(humanChoise === "Paper" && computerChoise ==="Scissors") {
+      console.log("You lose! Paper lose to Scissors");
+    } else if(humanChoise === "Scissors" && computerChoise === "Rock") {
+      console.log("You lose! Scissors lose to Rock");
+    } else if(humanChoise === "Scissors" && computerChoise === "Paper") {
+      console.log("You Win! Scissor beats Paper");
+    } else if(humanChoise === "Scissors" && computerChoise === "Scissors") {
+      console.log("Is a Tie!");
     }
 
   return;
