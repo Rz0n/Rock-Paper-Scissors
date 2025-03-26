@@ -1,5 +1,5 @@
 let humanScore = 0;
-let computerScore = 0;
+let computerScore;
 
 
 function getHumanChoise() {
@@ -33,6 +33,9 @@ function playGround(humanChoise, computerChoise) {
 
     if(humanChoise === "Rock" && computerChoise === "Paper") {
       console.log("You lose! Rock lose to a Paper!");
+      const value = Number(localStorage.getItem("inCout")) || 0;
+      computerScore = value + 1;
+      localStorage.setItem("inCout", computerScore);
     } else if(humanChoise === "Rock" && computerChoise === "Scissors") {
       console.log("You Win! Rock beats Scissors");
     } else if(humanChoise === "Rock" && computerChoise === "Rock") {
@@ -56,3 +59,8 @@ function playGround(humanChoise, computerChoise) {
 
 
 playGround();
+
+
+
+
+console.log(computerScore);
