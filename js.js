@@ -1,5 +1,6 @@
 let humanScore = 0;
 let computerScore = 0;
+let countRound = 0;
 
 
 function getHumanChoise() {
@@ -16,7 +17,7 @@ function getHumanChoise() {
   }
 
   return human;
-}
+};
 
 function getComputerChoise() {
   let choise = ['Rock', "Paper", "Scissors"];
@@ -70,13 +71,27 @@ function playGround(humanChoise, computerChoise) {
     }
 
   return;
-}
+};
+
+function PlayGame() {
+  
+  
+  while(countRound < 5) {
+    playGround();
+    countRound++;
+
+    if(humanScore > computerScore) {
+      console.log(`Human Win with Score: ${humanScore}`);
+    } else if (computerScore > humanScore) {
+      console.log(`Computer Win with Score: ${computerScore}`);
+    } else if (humanScore === computerScore) {
+      console.log("Is a Tie!");
+    }
+    console.log(`Game Round: ${countRound}`);
+  }; 
+};
 
 
-playGround();
+localStorage.clear();
 
-
-
-
-console.log(`Computer Score: ${computerScore}`);
-console.log(`Human Score: ${humanScore}`);
+PlayGame();
