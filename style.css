@@ -1,0 +1,60 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+
+body {
+  background-color: rgb(230, 248, 246);
+}
+
+
+h1 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.conteiner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  gap: 50px;
+}
+
+.rock {
+  background-image: url("Images/cave-painting.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 40px;
+  border: 0.5px solid black;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.paper {
+  background-image: url("Images/news.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 40px;
+  border: 0.5 solid black;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.scissors {
+  background-image: url("Images/scissor-tool.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px;
+  border: 0.5px solid black;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  font-weight: 900;
+}
